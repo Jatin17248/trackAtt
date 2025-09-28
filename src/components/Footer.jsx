@@ -5,12 +5,12 @@ function Footer() {
     <h6 className="text-sm text-center w-full">
       Created via 💙{" "}
       <a
-        href="https://github.com/BilalGumus"
+        href="https://github.com/Jatin17248/trackAtt"
         target="_blank"
-        alt="Bilal Gümüş's GitHub Account"
+        alt="Bug Busters"
         className="hover:underline"
       >
-        Bilal Gümüş
+        Bug Busters
       </a>
     </h6>
   );
