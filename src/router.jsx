@@ -12,12 +12,16 @@ import AttendanceSuccess from "./pages/AttendanceSuccess";
 import Layout from "./pages/Layout";
 import UserSelect from "./pages/UserSelect";
 import Protected from "./pages/Protected";
+import TeacherDashboard from "./pages/TeacherDashboard";
+import AdminDashboard from "./pages/AdminDashboard";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <>
       <Route path="/" element={<Layout />}>
         <Route path="/" element={<Home />} />
+        <Route path="teacher-dashboard" element={<TeacherDashboard />} />
+        <Route path="admin-dashboard" element={<AdminDashboard />} />
         <Route path="user-select" element={<UserSelect />} />
         <Route path="login" element={<Login />} />
         <Route path="register" element={<Register />} />

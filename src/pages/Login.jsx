@@ -18,9 +18,19 @@ function Login() {
     if (user) {
       localStorage.setItem("auth", JSON.stringify({
         status: true,
-        user: { rollNumber: user.rollNumber, name: user.name, id: user.id }
+        user: { rollNumber: user.rollNumber, name: user.name, id: user.id, role: user.role }
       }));
-      navigate("/", { replace: true });
+
+      // Redirect based on role
+      if (user.role === "student") {
+        navigate("/", { replace: true });
+      } else if (user.role === "teacher") {
+        navigate("/teacher-dashboard", { replace: true });
+      } else if (user.role === "admin") {
+        navigate("/admin-dashboard", { replace: true });
+      } else {
+        navigate("/", { replace: true }); // fallback
+      }
     } else {
       setLoginError("Invalid roll number or password");
     }

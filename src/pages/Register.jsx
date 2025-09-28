@@ -7,7 +7,8 @@ function Register() {
     rollNumber: "",
     email: "",
     password: "",
-    confirmPassword: ""
+    confirmPassword: "",
+    role: "student" // default role
   });
   const [error, setError] = useState("");
   const [success, setSuccess] = useState("");
@@ -51,7 +52,8 @@ function Register() {
       name: formData.name,
       rollNumber: formData.rollNumber,
       email: formData.email,
-      password: formData.password
+      password: formData.password,
+      role: formData.role
     };
 
     users.push(newUser);
@@ -120,6 +122,22 @@ function Register() {
                 className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"
                 placeholder="Enter your email"
               />
+            </div>
+            <div>
+              <label htmlFor="role" className="block text-sm font-medium text-gray-700">
+                Role
+              </label>
+              <select
+                id="role"
+                name="role"
+                value={formData.role}
+                onChange={handleChange}
+                className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"
+              >
+                <option value="student">Student</option>
+                <option value="teacher">Teacher</option>
+                <option value="admin">Admin</option>
+              </select>
             </div>
             <div>
               <label htmlFor="password" className="block text-sm font-medium text-gray-700">

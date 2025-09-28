@@ -13,70 +13,80 @@ const initializeDummyData = () => {
         name: "John Doe",
         rollNumber: "CS001",
         email: "john@example.com",
-        password: "password123"
+        password: "password123",
+        role: "student"
       },
       {
         id: "2",
         name: "Jane Smith",
         rollNumber: "CS002",
         email: "jane@example.com",
-        password: "password123"
+        password: "password123",
+        role: "student"
       },
       {
         id: "3",
         name: "Bob Johnson",
         rollNumber: "CS003",
         email: "bob@example.com",
-        password: "password123"
+        password: "password123",
+        role: "student"
       },
       {
         id: "4",
         name: "Alice Brown",
         rollNumber: "CS004",
         email: "alice@example.com",
-        password: "password123"
+        password: "password123",
+        role: "student"
       },
       {
         id: "5",
         name: "Charlie Wilson",
         rollNumber: "CS005",
         email: "charlie@example.com",
-        password: "password123"
+        password: "password123",
+        role: "teacher"
       },
       {
         id: "6",
         name: "Diana Prince",
         rollNumber: "CS006",
         email: "diana@example.com",
-        password: "password123"
+        password: "password123",
+        role: "student"
       },
       {
         id: "7",
         name: "Edward Norton",
         rollNumber: "CS007",
         email: "edward@example.com",
-        password: "password123"
+        password: "password123",
+        role: "teacher"
       },
       {
         id: "8",
         name: "Fiona Green",
         rollNumber: "CS008",
         email: "fiona@example.com",
-        password: "password123"
+        password: "password123",
+        role: "student"
       },
       {
         id: "9",
         name: "George Miller",
         rollNumber: "CS009",
         email: "george@example.com",
-        password: "password123"
+        password: "password123",
+        role: "admin"
       },
       {
         id: "10",
         name: "Helen Davis",
         rollNumber: "CS010",
         email: "helen@example.com",
-        password: "password123"
+        password: "password123",
+        role: "student"
       }
     ];
     localStorage.setItem("users", JSON.stringify(dummyUsers));
